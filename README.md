@@ -14,6 +14,9 @@
 
 ## Libraries used:
 
+### **mock**
+a library used to spy on functions and create stubs for tests
+
 ### **dotenv**
 a library used to read .env file and manage environment variables
 
