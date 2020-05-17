@@ -50,7 +50,7 @@ to install globally, you need to add "$HOME/.deno/bin" to path variable so denon
 - `POST /auth/login` -> login as user, requires password and email fields
 - `POST /auth/register` -> create a new user, requires password and email fields
 
-###Protected endpoints
+### Protected endpoints
 - `GET /auth/logout` -> logs a user out by invalidating the session ID, and clearing the cookies
 - `POST /todo` -> create a new todo (accepts text)
 - `GET /todo` -> returns all the todos for the logged in user
