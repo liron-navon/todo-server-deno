@@ -43,4 +43,3 @@ to install globally, you need to add "$HOME/.deno/bin" to path variable so denon
 - `denon` (requires denon to be installed)
 
 - `deno run --allow-all --unstable src/index.ts` runnin quickly (unsafe), the unstable flag is for the deno plugins feature (used by mongodb)
-# todo-server-deno
