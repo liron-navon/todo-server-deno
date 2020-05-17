@@ -51,8 +51,8 @@ to install globally, you need to add "$HOME/.deno/bin" to path variable so denon
 ## API
 
 ### Public endpoints
-- `POST /auth/login` -> login as user, requires password and email fields
-- `POST /auth/register` -> create a new user, requires password and email fields
+- `POST /auth/login` -> login as user, requires password and email fields, registers a cookie and creates a session id
+- `POST /auth/register` -> create a new user, requires password and email fields, registers a cookie and creates a session id
 
 ### Protected endpoints
 - `GET /auth/logout` -> logs a user out by invalidating the session ID, and clearing the cookies
