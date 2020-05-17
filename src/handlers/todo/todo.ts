@@ -1,6 +1,6 @@
 import { RouterContext } from "https://deno.land/x/oak/mod.ts";
 import { ContextState } from "../../types.ts";
-import { validateTodo } from "./validations.ts";
+import { validateUpdateTodo, validateCreateTodo } from "./validations.ts";
 import * as todos from "../../db/todos.ts";
 
 // returns a list of todos
@@ -12,11 +12,8 @@ export const listTodos = async (ctx: RouterContext<any, ContextState>) => {
 // creates a new todo
 export const createTodo = async (ctx: RouterContext<any, ContextState>) => {
   const user = ctx.state.user!;
-  const todo = validateTodo(ctx.state.body);
-  ctx.response.body = await todos.createTodo({
-    ...todo,
-    userId: user._id,
-  });
+  const todo = validateCreateTodo(ctx.state.body);
+  ctx.response.body = await todos.createTodo(user._id,  todo.text);
 };
 
 // gets a single todo by ID
@@ -43,6 +40,6 @@ export const updateTodo = async (
 ) => {
   const user = ctx.state.user!;
   const id = ctx.params.id;
-  const updates = validateTodo(ctx.state.body);
+  const updates = validateUpdateTodo(ctx.state.body);
   ctx.response.body = await todos.updateTodo(id, user._id, updates);
 };

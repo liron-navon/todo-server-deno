@@ -10,7 +10,13 @@ const todoSchema = {
   done: vs.boolean(),
 };
 
-export const validateTodo = (body: any): { text: string; done: boolean } => {
+export const validateCreateTodo = (body: any): { text: string; } => {
+  return vs.applySchemaObject({
+    text: todoSchema.text,
+  }, body);
+}
+
+export const validateUpdateTodo = (body: any): { text: string; done: boolean } => {
   return vs.applySchemaObject({
     text: todoSchema.text,
     done: todoSchema.done,

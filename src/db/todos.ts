@@ -11,8 +11,12 @@ export interface Todo {
   userId: string;
 }
 
-export const createTodo = (todo: Todo): Promise<ObjectId> =>
-  todos.insertOne(todo);
+export const createTodo = (userId: string, text: string): Promise<ObjectId> =>
+  todos.insertOne({
+    text,
+    userId,
+    done: false,
+  });
 
 export const findTodoById = (_id: string, userId: string): Promise<Todo> =>
   todos.findOne({ _id, userId });
