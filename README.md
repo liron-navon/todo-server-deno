@@ -43,3 +43,17 @@ to install globally, you need to add "$HOME/.deno/bin" to path variable so denon
 - `denon` (requires denon to be installed)
 
 - `deno run --allow-all --unstable src/index.ts` runnin quickly (unsafe), the unstable flag is for the deno plugins feature (used by mongodb)
+
+## API
+
+### Public endpoints
+`POST /auth/login` -> login as user, requires password and email fields
+`POST /auth/register` -> create a new user, requires password and email fields
+
+###Protected endpoints
+`GET /auth/logout` -> logs a user out by invalidating the session ID, and clearing the cookies
+`POST /todo` -> create a new todo (accepts text)
+`GET /todo` -> returns all the todos for the logged in user
+`GET /todo/:id` -> returns a single todo by id
+`PUT /todo/:id` -> updates a todo (only text or done)
+`DELETE /todo/:id` -> delete a todo by id 
