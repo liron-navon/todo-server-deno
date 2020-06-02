@@ -1,3 +1,6 @@
+**This was a throwaway project I started for a course I wanted to create, I might create a medium article instead, feel free to use, copy, whatever =).
+
+
 # todo-server-deno
 
 ## Topics that needs to be covered
