@@ -1,4 +1,4 @@
-**This was a throwaway project I started for a course I wanted to create, I might create a medium article instead, feel free to use, copy, whatever =).
+** This was a throwaway project I started for a course I wanted to create, I might create a medium article instead, feel free to use, copy, whatever =).
 
 
 # todo-server-deno
